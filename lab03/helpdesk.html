@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Tanvir Rahman Tonoy">
+        <meta name="keywords" content="HTML, CSS, JavaScript, form , input">
+        <meta name="description" content="Helpdesk form">
+        <title>CWA Help Desk Appointment</title>
+    </head>
+    <body>
+        <a href="https://www.swinburne.edu.au"><img src="./images/logo.png" alt="SwinburneLOGO"></a>
+        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+                <!--Note we have to use a special escape character to print an apostrophe on the Web page -->
+                <h1>CWA Help Desk Appointment</h1>
+                <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday <br> Check Blackboard for when CWA tutors will be there. </p>
+                <fieldset>
+                    <legend>Student Details</legend>
+                    <label for="studentID">StudentID</label>
+                    <input type="text" name="studentID" id="studentID" required pattern="^\d{7,10}$" title="Student ID must be between 7 to 10 digits." 
+>
+
+                    <br>
+                    <label for="givenName">Given Name</label>
+                    <input type="text" name="givenName" id="givenName">
+                    <label for="familyName">Family Name</label>
+                    <input type="text" name="familyName" id="familyName" required 
+                    pattern="^[A-Za-z]+$" 
+                    title="Must contain letters only.">
+             
+
+                </fieldset>
+                <fieldset>
+                    <legend>Your Unit</legend>
+                    <input type="radio" name="unit" id="unit1" required="required" value="COS10011">
+                    <label for="unit1">COS10011</label>
+                    <input type="radio" name="unit" id="unit2" required="required" value="COS600004">
+                    <label for="unit2">COS60004</label>
+
+                    <input type="radio" name="unit" id="unit3" required="required" value="COS60007">
+                    <label for="unit3">COS60007</label>
+                    
+                    <br>
+                    <label for="tutor">Your Tutor</label>
+                    <select name="tutor" id="tutor">
+                        <option value="">Please Select</option>
+                        <option value="name2">Name2</option>
+                        <option value="name3">Name3</option>
+                    </select>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Issue</legend>
+                    <label for="html">HTML</label>
+                    <input type="checkbox" name="issue" id="html" value="html" checked>
+                    <label for="css">CSS</label>
+                    <input type="checkbox" name="issue" id="css" value="css">
+                    <label for="js">JavaScript</label>
+                    <input type="checkbox" name="issue" id="js" value="js">
+                    <label for="php">PHP</label>
+                    <input type="checkbox" name="issue" id="php" value="php">
+                    <label for="mysql">MySQL</label>
+                    <input type="checkbox" name="issue" id="mysql" value="mysql">
+                    <br>
+                    <label for="Description">Description of Issue</label><br>
+                    <textarea name="Description" id="Description" cols="30" rows="10" placeholder="Write description of your problem here..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferred Date/Time</legend>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required="required">
+                    <label for="time">Time</label>
+                    <input type="time" name="time" id="time" required="required">
+                </fieldset>
+                <input type="submit" value="Book">
+                <input type="reset" value="Reset form">
+            </form>
+    </body>
+</html>
